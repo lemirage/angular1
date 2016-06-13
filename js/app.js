@@ -19,19 +19,12 @@ angular.module('testApp',[])
       lastname: 'lloris',
       number: 1,
       selected:true,
-      img:"lloris.jpg"
+      img:"llois.jpg"
     };
 
-    var joueur3 = {
-      firstname: 'toto',
-      lastname: 'titi',
-      number: 17,
-      selected:false,
-      img:""
-    };
 
     $scope.playerNumber = 89;
-    $scope.joueurs = [joueur1,joueur2,joueur3];
+    $scope.joueurs = [joueur1,joueur2];
 
     $scope.majus = function(){
       console.log("click sur le boutton");
@@ -41,21 +34,42 @@ angular.module('testApp',[])
       }
     };
 
+    $scope.visible = {
+      'opacity':'1',
+      'max-height':'150px'
+    };
+    $scope.imgjoueur = $scope.joueurs[0].img;
+    /*Permet de Reset l'Element choisi*/
+    $scope.reset = function(toReset){
+      $scope[toReset] = '';
+    };
+
+
     $scope.displayImg = function(joueur){
       console.log("in");
 
-      console.log( $scope.imgjoueur);
       $scope.playerNumber = joueur.number;
-    //  $scope.imgjoueur.src=img;
+      $scope.imgjoueur =  joueur.img;
+
+        console.log(  $scope.imgjoueur);
+        $scope.visible = {
+          'opacity':'1',
+            'max-height':'150px'
+        };
       //$scope.imgjoueur.display = "block";
-
-
-
     };
     $scope.hideImg = function(joueur){
-      console.log("out");
       $scope.playerNumber = "joueur.number";
-    //  $scope.imgjoueur.display = "none";
+      $scope.visible = {
+        'opacity':'0',
+          'max-height':'150px'
+      };
+
+    };
+
+    $scope.alert={
+      'color':'red',
+      'text-decoration' : 'underline'
     };
 
   }) // fin de premier controller
