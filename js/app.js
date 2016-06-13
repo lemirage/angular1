@@ -54,7 +54,7 @@ angular.module('testApp',[])
         console.log(  $scope.imgjoueur);
         $scope.visible = {
           'opacity':'1',
-            'max-height':'150px'
+          'max-height':'150px'
         };
       //$scope.imgjoueur.display = "block";
     };
@@ -62,7 +62,7 @@ angular.module('testApp',[])
       $scope.playerNumber = "joueur.number";
       $scope.visible = {
         'opacity':'0',
-          'max-height':'150px'
+        'max-height':'150px'
       };
 
     };
