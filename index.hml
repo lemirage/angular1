@@ -11,17 +11,26 @@
     <h1>Titre de niveau 1 </h1>
     <section ng-controller="mainCtrl">
       <h1>{{ title }}</h1>
+      <img  src="" alt="" ng-model="imgjoueur"/>
+      <input type="text" name="name" value="" ng-model="playerNumber">
       <ul>
-        <li ng-repeat="joueur in joueurs">
+        <li ng-repeat="joueur in joueurs"
+            ng-mouseover="displayImg(joueur)"
+            ng-mouseleave="hideImg(joueur)">
           {{ joueur.firstname }}
         </li>
       </ul>
+      <input type="button" name="uppercase" id="uppercase" value="Uppercase" ng-click="majus()">
 
+    </section>
+    <section ng-controller="playerCtrl">
+        <p> Paragraphe  {{ title }} </p>
     </section>
 
   <!--Start Scripts-->
   <script src="js/angular.min.js" ></script>
   <script src="js/app.js" ></script>
+  <script src="js/jquery-3.0.0.min.js"></script>
   <!--End Scripts-->
 </body>
 </html>
