@@ -1,0 +1,27 @@
+<!doctype html>
+<html  ng-app="testApp" lang="fr">
+<head>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  <title> Formation Angular</title>
+
+</head>
+<body >
+    <h1>Titre de niveau 1 </h1>
+    <section ng-controller="mainCtrl">
+      <h1>{{ title }}</h1>
+      <ul>
+        <li ng-repeat="joueur in joueurs">
+          {{ joueur.firstname }}
+        </li>
+      </ul>
+
+    </section>
+
+  <!--Start Scripts-->
+  <script src="js/angular.min.js" ></script>
+  <script src="js/app.js" ></script>
+  <!--End Scripts-->
+</body>
+</html>
